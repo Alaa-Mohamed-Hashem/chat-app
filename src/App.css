@@ -1,39 +1,76 @@
-.App {
-  text-align: center;
+a {
+  text-decoration: none;
+  color: #f1f1f1;
+  font-weight: 300;
+  width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.active {
+  background-color: #126d73;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
+.app {
+  position: relative;
+}
+
+.app .ArrowRight {
+  position: absolute;
+  top: 55%;
+  left: -5px;
+  font-size: 30px;
+  opacity: 0.2;
+  background-color: #126d73;
+  border-radius: 0% 50% 50% 0%;
+  color: #fff;
+  display: none;
+}
+
+.app .ArrowLeft {
+  position: absolute;
+  top: 55%;
+  right: 0px;
+  font-size: 30px;
+  background-color: #f6f6f6;
+  color: #12848c;
+  border-radius: 50% 0% 0% 50%;
+  z-index: 9999;
+  display: none !important;
+}
+
+.disArrowLeft{
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .app .ArrowLeft,
+  .app .ArrowRight {
+    display: block !important;
   }
 }
 
-.App-header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-}
 
-.App-link {
-  color: rgb(112, 76, 182);
+/* ********************Start scrollbar************************ */
+::-webkit-scrollbar {
+  width: 9px;
 }
-
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+::-webkit-scrollbar-button {
+  width: 8px;
+  height: 3px;
 }
+::-webkit-scrollbar-track {
+  background: #eee;
+  border: thin solid lightgray;
+  box-shadow: 0px 0px 3px #dfdfdf inset;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #126d73;
+  border: thin solid gray;
+  border-radius: 10px;
+  -webkit-transition: background 1s;
+  transition: background 1s;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(2 107 134);
+}
+/* ********************End scrollbar************************ */
